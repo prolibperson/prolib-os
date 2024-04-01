@@ -14,3 +14,7 @@ to build:
 	for the cross compiler, you will need (libgmp-dev, libmpfr-dev, libmpc-dev, gcc (yes we are using gcc to build gcc))
 	
 	run "make" to compile and "make run" to run the os using qemu
+
+if you dont feel like building:
+	in the "build" directory, there will be a nice bin file containing the os, so all you will need to do is to "make run"
+	(or "qemu-system-x86_64 -fda build/prolib-os.bin")
