@@ -1,4 +1,4 @@
-[org 0x7c00] ; set origin
+[org 0x7c00] ; set offset because of reserved space
 
 ;lets try to print something to the screen...
 mov ah, 0x0e    ; tty mode ofc
