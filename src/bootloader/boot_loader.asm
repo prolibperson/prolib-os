@@ -1,21 +1,20 @@
 [org 0x7c00] ; set offset because of reserved space
 
-;lets try to print something to the screen...
-mov ah, 0x0e    ; tty mode ofc
-mov al, 'H'     ; first letter!
-int 0x10        ; now lets use this interrupt to print it
+; here we are going to print messages to the screen using the print functions we made earlier!
+mov bx, MSG_HELLO_WORLD
+call print
+call print_nl
+mov bx, MSG_NEW_LINE
+call print
 
-;same thing for here!
-mov ah, 0x0e
-mov al, 'i'
-int 0x10
+jmp $
 
-mov ah, 0x0e
-mov al, '!'
-int 0x10
+%include "src/bootloader/print.asm" ; our nice printing assembly file
 
-jmp $           ; now we hang!
+; where we define our strings...
+MSG_HELLO_WORLD db "Hello World!", 0
+MSG_NEW_LINE db "We are on a new line!", 0
 
 ;we love BIOS
 times 510 - ($-$$) db 0 ; lets fill the rest of the boot sector with zeros! (besides our code)
-dw 0xaa55
+dw 0xaa55		; magic line that marks our bin as bootable!
