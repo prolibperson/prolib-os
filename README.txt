@@ -14,6 +14,3 @@ to build:
 	for the cross compiler, you will need (libgmp-dev, libmpfr-dev, libmpc-dev, gcc (yes we are using gcc to build gcc))
 	
 	run "make" to compile and "make run" to run the os using qemu
-
-
-
