@@ -52,5 +52,5 @@ MSG_RETURNED_KERNEL db "Returned from kernel. Error?", 0
 BOOT_DRIVE db 0
 
 ;we love BIOS
-times 510 - ($-$$) db 0 ; lets fill the rest of the boot sector with zeros! (besides our code)
+times 510 - ($-$$) db 0 ; lets fill the rest of the boot sector...
 dw 0xaa55		; magic line that marks our bin as bootable!
