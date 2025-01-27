@@ -9,7 +9,7 @@
 
   <h3 align="center">prolibOS</h3>
   <p align="center">
-    An i386 (soon to be x86_64) operating system.
+    An x86_64 operating system.
   </p>
 </div>
 
